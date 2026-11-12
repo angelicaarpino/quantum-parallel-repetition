@@ -28,6 +28,6 @@ Current phase: initial implementation and benchmark validation.
 
 ## Team
 
-Group research project at Maastricht University.
+ Quantum research project 3 Maastricht University
 
-**Supervisors:** Dr. David Mestel and Dr. Georgios Stamoulis.
+**Supervisors:** Dr. David Mestel and Dr. Georgios Stamoulis
