@@ -18,7 +18,7 @@ This project investigates how the winning probabilities of quantum non-local gam
 
 Our computational approach includes classical strategy enumeration, explicit quantum strategies, numerical optimization, and semidefinite programming relaxations using the NPA hierarchy.
 
-CHSH serves as the initial benchmark for validating the implementation. Additional non-XOR games will be selected based on theoretical relevance and computational feasibility.
+CHSH serves as the benchmark for validating the implementation. The non-XOR games selected are Feige's game and the Mermin-Peres magic square.
 
 ## Code
 
@@ -56,9 +56,30 @@ python experiments/feige/run.py
 python experiments/magic_square/run.py
 ```
 
+## Results so far
+
+Winning probabilities for n parallel repetitions (full tables in `experiments/<game>/results.md`).
+
+| Game | n | Classical ω(Gⁿ) | Quantum, independent | Quantum, joint (see-saw, local dim) | NPA upper bound |
+|---|---|---|---|---|---|
+| CHSH | 1 | 0.750 | 0.854 | – | 0.854 |
+| CHSH | 2 | 0.625 | 0.729 | 0.729 (4) | 0.729 |
+| Feige | 1 | 0.500 | 0.5625 | – | 0.5625 |
+| Feige | 2 | 0.500 | 0.316 | 0.500 (3, 4) | 0.500 |
+| Magic square | 1 | 0.889 | 1 | – | 1 |
+| Magic square | 2 | 0.815 | 1 (dim 16) | 0.869 (4) | – |
+
+All single-game values match the literature. Joint play does not help for CHSH (perfect parallel
+repetition for XOR games); for Feige it improves on independent quantum play but only reaches the
+classical value 1/2; for the magic square, local dimension 4 for both copies stays below 1.
+
 ## Project Status
 
-Current phase: initial implementation and benchmark validation.
+- Done (Period 2, weeks 1–4): game selection, game definitions, classical values, independent
+  quantum strategies for n = 1, 2, NPA upper bounds, tests.
+- Started (week 5): first joint-strategy runs for n = 2.
+- Next: complete joint strategies for n = 2 and n = 3 where feasible; resource-limited runs with
+  local dimension d ≤ 2^m; report outline.
 
 ## Team
 
