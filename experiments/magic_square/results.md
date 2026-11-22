@@ -9,4 +9,6 @@ Joint strategy for n = 2 (see-saw, lower bound):
 
 | local dim | value | restarts |
 |---|---|---|
-| 4 | 0.868510 | 3 |
+| 2 | 0.853202 | 6 |
+| 3 | 0.856487 | 6 |
+| 4 | 0.868510 | 6 |

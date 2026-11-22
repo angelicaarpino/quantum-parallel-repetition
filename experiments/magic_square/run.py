@@ -3,8 +3,8 @@
 The classical value for n = 2 is computed exactly with a MILP (~2.5 minutes).
 The independent quantum strategy (Mermin-Peres) already wins with probability
 1, using local dimension 4 per copy (16 for n = 2), so the n = 2 NPA bound is
-skipped.  The joint run uses local dimension 4 for both copies together, i.e.
-half the qubits of independent play (a first resource-limited data point).
+skipped.  The joint runs use local dimension 2, 3 and 4 for both copies
+together (independent play needs 16), a first resource-limited data point.
 
     python experiments/magic_square/run.py
 """
@@ -19,7 +19,8 @@ CONFIG = ExperimentConfig(
     game=magic_square,
     single_strategy=magic_square_strategy,
     npa_levels={1: "1+AB", 2: None},
-    joint_dims=[4],
+    joint_dims=[2, 3, 4],
+    joint_restarts=6,  # see-saw often stops in local optima here
 )
 
 if __name__ == "__main__":

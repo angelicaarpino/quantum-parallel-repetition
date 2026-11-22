@@ -12,7 +12,7 @@
       "npa_upper": 0.9999999895795235,
       "npa_level": "1+AB",
       "seconds_classical": 0.0,
-      "seconds_npa": 11.4
+      "seconds_npa": 10.3
     },
     {
       "n": 2,
@@ -24,16 +24,28 @@
       "quantum_independent_local_dim": 16,
       "npa_upper": null,
       "npa_level": null,
-      "seconds_classical": 125.8,
+      "seconds_classical": 114.9,
       "seconds_npa": 0.0
     }
   ],
   "joint_n2_seesaw": [
     {
+      "local_dim": 2,
+      "value": 0.8532019122522023,
+      "restarts": 6,
+      "seconds": 71.1
+    },
+    {
+      "local_dim": 3,
+      "value": 0.8564870595661698,
+      "restarts": 6,
+      "seconds": 116.8
+    },
+    {
       "local_dim": 4,
       "value": 0.8685103948436159,
-      "restarts": 3,
-      "seconds": 203.5
+      "restarts": 6,
+      "seconds": 310.3
     }
   ]
 }

@@ -38,6 +38,7 @@ experiments/
   feige/
   magic_square/
     each: run.py, results.md, results.json, <game>.ipynb
+  make_summary.py summary.md (all games, decay rates) and figures/
 tests/            checks against known values
 ```
 
@@ -54,6 +55,7 @@ pytest
 python experiments/chsh/run.py
 python experiments/feige/run.py
 python experiments/magic_square/run.py
+python experiments/make_summary.py
 ```
 
 ## Results so far
@@ -67,11 +69,13 @@ Winning probabilities for n parallel repetitions (full tables in `experiments/<g
 | Feige | 1 | 0.500 | 0.5625 | – | 0.5625 |
 | Feige | 2 | 0.500 | 0.316 | 0.500 (3, 4) | 0.500 |
 | Magic square | 1 | 0.889 | 1 | – | 1 |
-| Magic square | 2 | 0.815 | 1 (dim 16) | 0.869 (4) | – |
+| Magic square | 2 | 0.815 | 1 (dim 16) | 0.853 / 0.856 / 0.869 (2 / 3 / 4) | – |
 
 All single-game values match the literature. Joint play does not help for CHSH (perfect parallel
 repetition for XOR games); for Feige it improves on independent quantum play but only reaches the
-classical value 1/2; for the magic square, local dimension 4 for both copies stays below 1.
+classical value 1/2; for the magic square, with local dimension at most 4 for both copies the joint
+value stays below 1 (independent play needs dimension 16). Decay rates and figures:
+`experiments/summary.md`, `experiments/figures/`.
 
 ## Project Status
 
