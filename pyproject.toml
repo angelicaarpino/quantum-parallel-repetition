@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qpr"
+version = "0.1.0"
+description = "Parallel repetition for quantum non-local games"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy>=1.9", "cvxpy>=1.4", "matplotlib"]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter", "ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
