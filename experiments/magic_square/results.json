@@ -1,0 +1,39 @@
+{
+  "game": "MagicSquare",
+  "repetitions": [
+    {
+      "n": 1,
+      "classical": 0.8888888888888888,
+      "classical_method": "enumeration",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.8888888888888888,
+      "quantum_independent": 0.9999999999999983,
+      "quantum_independent_local_dim": 4,
+      "npa_upper": 0.9999999895795235,
+      "npa_level": "1+AB",
+      "seconds_classical": 0.0,
+      "seconds_npa": 11.4
+    },
+    {
+      "n": 2,
+      "classical": 0.8148148148148147,
+      "classical_method": "milp",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.7901234567901234,
+      "quantum_independent": 0.9999999999999594,
+      "quantum_independent_local_dim": 16,
+      "npa_upper": null,
+      "npa_level": null,
+      "seconds_classical": 125.8,
+      "seconds_npa": 0.0
+    }
+  ],
+  "joint_n2_seesaw": [
+    {
+      "local_dim": 4,
+      "value": 0.8685103948436159,
+      "restarts": 3,
+      "seconds": 203.5
+    }
+  ]
+}

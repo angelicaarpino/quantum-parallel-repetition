@@ -1,0 +1,51 @@
+{
+  "game": "Feige",
+  "repetitions": [
+    {
+      "n": 1,
+      "classical": 0.5,
+      "classical_method": "enumeration",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.5,
+      "quantum_independent": 0.5624999971653731,
+      "quantum_independent_local_dim": 3,
+      "npa_upper": 0.562500005350334,
+      "npa_level": "1+AB",
+      "seconds_classical": 0.0,
+      "seconds_npa": 0.0
+    },
+    {
+      "n": 2,
+      "classical": 0.5,
+      "classical_method": "enumeration",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.25,
+      "quantum_independent": 0.31640624681104484,
+      "quantum_independent_local_dim": 9,
+      "npa_upper": 0.4999999623812357,
+      "npa_level": "1",
+      "seconds_classical": 0.0,
+      "seconds_npa": 1.6
+    }
+  ],
+  "joint_n2_seesaw": [
+    {
+      "local_dim": 2,
+      "value": 0.37707309274597195,
+      "restarts": 3,
+      "seconds": 8.9
+    },
+    {
+      "local_dim": 3,
+      "value": 0.4999999891585589,
+      "restarts": 3,
+      "seconds": 12.1
+    },
+    {
+      "local_dim": 4,
+      "value": 0.499999990310026,
+      "restarts": 3,
+      "seconds": 16.6
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "game": "CHSH",
+  "repetitions": [
+    {
+      "n": 1,
+      "classical": 0.75,
+      "classical_method": "enumeration",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.75,
+      "quantum_independent": 0.8535533905932737,
+      "quantum_independent_local_dim": 2,
+      "npa_upper": 0.8535533891577919,
+      "npa_level": "1+AB",
+      "seconds_classical": 0.0,
+      "seconds_npa": 0.0
+    },
+    {
+      "n": 2,
+      "classical": 0.625,
+      "classical_method": "enumeration",
+      "classical_proven_optimal": true,
+      "classical_independent": 0.5625,
+      "quantum_independent": 0.7285533905932743,
+      "quantum_independent_local_dim": 4,
+      "npa_upper": 0.7285532844240639,
+      "npa_level": "1+AB",
+      "seconds_classical": 0.0,
+      "seconds_npa": 278.9
+    }
+  ],
+  "joint_n2_seesaw": [
+    {
+      "local_dim": 4,
+      "value": 0.7285533891599205,
+      "restarts": 3,
+      "seconds": 20.7
+    }
+  ]
+}

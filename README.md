@@ -32,11 +32,17 @@ src/qpr/
   quantum.py    explicit quantum strategies, tensor products (independent play)
   seesaw.py     see-saw optimisation in fixed local dimension (lower bounds)
   npa.py        NPA hierarchy levels 1, 1+AB, 2 (upper bounds)
-scripts/
-  run_baselines.py  weeks 1-4 table -> results/baselines.md
-  joint_n2.py       week 5 starting point: joint strategies for n = 2
-tests/              checks against known values
+  experiments.py  runs every experiment for one game and saves the results
+experiments/
+  chsh/           benchmark
+  feige/
+  magic_square/
+    each: run.py, results.md, results.json, <game>.ipynb
+tests/            checks against known values
 ```
+
+For each game and n = 1, 2: exact classical value, independent quantum value,
+NPA upper bound, and (n = 2) a joint quantum strategy found by see-saw.
 
 Setup and run:
 
@@ -45,8 +51,9 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -e .[dev]
 pytest
-python scripts/run_baselines.py
-python scripts/joint_n2.py --game feige --dims 2 3 4
+python experiments/chsh/run.py
+python experiments/feige/run.py
+python experiments/magic_square/run.py
 ```
 
 ## Project Status

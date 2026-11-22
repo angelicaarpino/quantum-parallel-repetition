@@ -76,6 +76,15 @@ def test_seesaw_feige_dim3():
     assert np.isclose(res.value, 9 / 16, atol=1e-5)
 
 
+def test_run_experiments(tmp_path):
+    from qpr.experiments import ExperimentConfig, run_experiments
+
+    cfg = ExperimentConfig(chsh, chsh_strategy, {1: "1", 2: None}, joint_dims=[2], joint_restarts=1)
+    out = run_experiments(cfg, tmp_path, quick=True)
+    assert np.isclose(out["repetitions"][1]["classical"], 10 / 16)
+    assert (tmp_path / "results.md").exists()
+
+
 def test_seesaw_chsh():
     res = seesaw(chsh(), 2, restarts=3, seed=1)
     res.strategy.check(atol=1e-6)
